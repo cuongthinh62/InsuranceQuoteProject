@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="InsuranceQuoteAPI/InsuranceQuote.API.csproj" />
+  <Project Path="InsuranceQuoteServices/InsuranceQuote.Services.csproj" Id="6318938d-e103-45f7-8d6c-4438af12b2f2" />
+  <Project Path="Repositories/InsuranceQuote.Repositories.csproj" Id="3c367b2d-c8b0-41e0-ac40-11a20c3c266c" />
+</Solution>

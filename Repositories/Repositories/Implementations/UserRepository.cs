@@ -22,7 +22,7 @@ namespace InsuranceQuoteAPI.Repositories.Implementations
 
         public async Task<User> DeleteUserAsync(int id)
         {
-            var FindUserDelete = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+            var FindUserDelete = await _context.Users.FirstOrDefaultAsync(u => u.UserId == id);
             if(FindUserDelete != null)
             {
                 _context.Users.Remove(FindUserDelete);
@@ -34,7 +34,7 @@ namespace InsuranceQuoteAPI.Repositories.Implementations
 
         public async Task<User?> GetUserAsync(string name)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => u.UserName == name);
+            return await _context.Users.FirstOrDefaultAsync(u => u.Username == name);
         }
 
         public async Task<List<User>> GetUsersAsync()
@@ -45,7 +45,7 @@ namespace InsuranceQuoteAPI.Repositories.Implementations
 
         public async Task<User> UpdatedUserAsync(User user)
         {
-             var AccountUpdate = _context.Users.FirstOrDefault(u => u.Id == user.Id);
+             var AccountUpdate = _context.Users.FirstOrDefault(u => u.UserId == user.UserId);
             if (AccountUpdate != null) { 
                 AccountUpdate.FullName = user.FullName;
                 _context.Users.Update(AccountUpdate);
