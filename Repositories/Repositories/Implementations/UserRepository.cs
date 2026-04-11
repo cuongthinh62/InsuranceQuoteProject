@@ -1,13 +1,13 @@
-﻿using InsuranceQuoteAPI.Data;
-using InsuranceQuoteAPI.Models;
+﻿using InsuranceQuoteAPI.Models;
 using InsuranceQuoteAPI.Repositories.Contract;
+using InsuranceQuoteAPI.Repositories.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace InsuranceQuoteAPI.Repositories.Implementations
 {
     public class UserRepository : IUserRepository
     {
-        private InsuranceQuoteContext _context;
+        private readonly InsuranceQuoteContext _context;
 
         public UserRepository(InsuranceQuoteContext context)
         {
