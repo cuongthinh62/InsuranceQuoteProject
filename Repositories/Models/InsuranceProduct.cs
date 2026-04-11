@@ -15,7 +15,7 @@ namespace InsuranceQuoteAPI.Models
         public string InsuranceType { get; set; } = null!;
 
         [Required, Column(TypeName = "decimal(12,2)")]
-        public decimal BasePrice { get; set; }
+        public decimal BasePrice { get; set; } = 800;
 
         [Column(TypeName = "decimal(15,2)")]
         public decimal? MinCoverage { get; set; }
